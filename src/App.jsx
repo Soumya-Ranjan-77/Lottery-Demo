@@ -13,7 +13,7 @@ function App() {
   };
   return (
     <>
-      <Lottery n={3} winCondition={winConditionEvery} />
+      <Lottery n={3} winCondition={winCondition} />
     </>
   );
 }

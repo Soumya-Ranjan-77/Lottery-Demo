@@ -1,0 +1,38 @@
+.Totalpage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.Totalpage h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.Totalpage h3 {
+  margin: 20px 0;
+  color: #22c55e;
+  font-size: 1.5rem;
+}
+.Totalpage {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top left, #00e5ff 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #8b5cf6 0%, transparent 30%),
+    #0f172a;
+
+  color: white;
+}

@@ -1,0 +1,140 @@
+.Ticket {
+  position: relative;
+
+  width: 390px;
+  height: 230px;
+
+  margin: 35px auto;
+  padding: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  border-radius: 28px;
+
+  /* Premium dark glass */
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.18),
+    0 25px 60px rgba(0, 0, 0, 0.4);
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+/* Top shine */
+.Ticket::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+}
+
+/* Bottom ambient glow */
+.Ticket::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 120px;
+
+  bottom: -90px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: rgba(0, 200, 255, 0.18);
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+/* Ticket label */
+.Ticket p {
+  position: absolute;
+
+  top: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  z-index: 5;
+}
+
+/* Small decorative lines */
+.Ticket p::before,
+.Ticket p::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 45px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.Ticket p::before {
+  right: calc(100% + 12px);
+}
+
+.Ticket p::after {
+  left: calc(100% + 12px);
+}
+
+/* Slot-machine display area */
+.Ticket > .TicektNum {
+  z-index: 3;
+}
+
+/* Hover */
+.Ticket:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    0 30px 70px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(0, 200, 255, 0.12);
+}
